@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
+import CompanyCarousel from "../components/CompanyCarousel";
+import { companies } from "../data/companies";
 
 export default function Home() {
   // Basic SEO without extra deps
@@ -46,6 +48,9 @@ export default function Home() {
           <span key={t} className="border rounded-full px-3 py-1 opacity-80">{t}</span>
         ))}
       </div>
+
+      {/* COMPANIES / EXPERIENCE CAROUSEL */}
+      <CompanyCarousel items={companies} speedMs={22000} />
 
       {/* RECENT PROJECTS */}
       <section className="max-w-5xl mx-auto">

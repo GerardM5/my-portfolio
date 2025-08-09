@@ -1,3 +1,15 @@
 @import "tailwindcss";
 
+/* ===== Custom utilities ===== */
+
+/* Infinite marquee for companies carousel (used by animate-[scroll_...]) */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Minimal button styles used across the site */
+.btn { @apply inline-flex items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-sm hover:opacity-90 disabled:opacity-60; }
+.btn-primary { @apply bg-black text-white dark:bg-white dark:text-black; }
+
 /* Your custom styles can go here */
