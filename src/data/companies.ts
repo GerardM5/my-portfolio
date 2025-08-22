@@ -9,5 +9,5 @@ export const companies: Company[] = [
     { name: "Accenture", url: "https://www.accenture.com", logo: "/logos/accenture.svg" },
     { name: "Generalitat de Catalunya", url: "https://web.gencat.cat", logo: "/logos/gencat.svg" },
     { name: "NTT DATA", url: "https://www.nttdata.com", logo: "/logos/nttdata.svg" },
-    { name: "IFCO", url: "https://www.ifco.com", logo: "/logos/ifco.svg" },
+    { name: "IFCO", url: "https://www.ifco.com", logo: "/logos/ifco.svg", scale: 0.85 },
 ];
