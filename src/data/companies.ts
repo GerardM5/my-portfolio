@@ -3,6 +3,7 @@ export type Company = {
     name: string;
     url: string;      // official site
     logo: string;     // path to /public/logos/*.svg|png
+    scale?: number;   // optional scale factor for logo display
 };
 export const companies: Company[] = [
     { name: "SC Trade Technologies", url: "https://www.sctrade.es", logo: "/logos/sctrade.svg" },
