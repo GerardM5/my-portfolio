@@ -56,11 +56,18 @@ export default function Contact() {
     setStatus({ type: "submitting" });
 
     try {
-      // Replace this with your real endpoint or a provider like Formspree/EmailJS
-      const res = await fetch("/api/contact", {
+      // Send to n8n webhook with minimal metadata
+      const res = await fetch("https://gerardmartinez.app.n8n.cloud/webhook-test/send-message", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: form.name, email: form.email, message: form.message }),
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        // CORS is default; no credentials sent
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          source: "my-portfolio/contact",
+          timestamp: new Date().toISOString()
+        }),
       });
 
       if (!res.ok) throw new Error(`Request failed with ${res.status}`);
